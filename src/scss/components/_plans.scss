@@ -43,37 +43,47 @@
   text-transform: uppercase;
 }
 
-.plans-list {
+// plans lists
+
+.plans-category-list {
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
   @include mx.adaptive("gap", 15, 10, 0);
 }
 
-.plans-item {
+.category-item {
   position: relative;
+
+  border-radius: 13px;
+  border: 3px solid #dff1ff;
   background: #fff;
-  @include mx.adaptive("width", 416, 216, 0);
+
+  @include mx.adaptive("width", 416, 217, 0);
+  @include mx.adaptive("height", 1270, 650, 0);
+  @include mx.adaptive("padding-bottom", 38, 19, 0);
 }
 
-.plans-image {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: -5%;
+.category-title-container {
+  position: relative;
 
-  @include mx.adaptive("width", 91, 51, 0);
-  @include mx.adaptive("height", 91, 51, 0);
-
-  transform: translate(-50%);
-}
-
-.item-title-container {
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 13px 13px 0px 0px;
   background: #dff1ff;
-  @include mx.adaptive("height", 135, 70, 0);
-  width: 100%;
+
+  @include mx.adaptive("height", 135, 71, 0);
+  @include mx.adaptive("margin-bottom", 30, 15, 0);
+}
+
+.plans-image {
+  position: absolute;
+  left: 50%;
+  top: -50%;
+
+  transform: translate(-50%);
 }
 
 .plan-name {
@@ -108,37 +118,30 @@
   margin: 0 auto;
 }
 
-.plans-content {
-  position: relative;
-
-  padding: calc(15px + (30 - 15) * ((100vw - 1000px) / (1920 - 1000)))
-    calc(9px + (19 - 9) * ((100vw - 1000px) / (1920 - 1000)));
-
-  border: 3px solid #dff1ff;
-  border-radius: 0 0 13px 13px;
-
-  @include mx.adaptive("height", 1159, 552, 0);
-}
-
-.earn-text {
-  color: #6e9af3;
-  text-align: center;
-  font-family: "Futura PT";
-  @include mx.adaptive("font-size", 20, 10, 0);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%; /* 19.809px */
-  letter-spacing: -0.396px;
-
-  @include mx.adaptive("padding", 20, 10, 0);
-
+.earn-container {
   border-radius: 10px;
   border: 1px solid #6e9af3;
-
+  @include mx.adaptive("padding", 15, 10, 0);
   @include mx.adaptive("margin-bottom", 40, 20, 0);
+  @include mx.adaptive("width", 375, 196, 0);
+  margin-left: auto;
+  margin-right: auto;
+
+  .earn-text {
+    color: #6e9af3;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 20, 10, 0);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 19.809px */
+    letter-spacing: -0.396px;
+  }
 }
 
 .plans-modules-list {
+  @include mx.adaptive("width", 375, 196, 0);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   @include mx.adaptive("gap", 10, 7, 0);
@@ -163,7 +166,17 @@
   }
 }
 
+.plans-desc-container {
+  position: absolute;
+
+  @include mx.adaptive("left", 19, 10, 0);
+  @include mx.adaptive("bottom", 38, 17, 0);
+}
+
 .plans-desc-list {
+  @include mx.adaptive("width", 375, 196, 0);
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   @include mx.adaptive("gap", 10, 7, 0);
@@ -186,8 +199,8 @@
   text-decoration: line-through;
 
   span {
-    color: #6e9af3;
     font-weight: 500;
+    color: #6e9af3;
   }
 }
 
@@ -195,6 +208,8 @@
   @include mx.adaptive("padding", 20, 10, 0);
   border-radius: 10px;
   border: 1px solid #6e9af3;
+  @include mx.adaptive("width", 375, 196, 0);
+  margin: 0 auto;
 }
 
 .price-title {
@@ -228,7 +243,7 @@
 
 // LIST ITEM 1
 
-.plans-list .plans-item:nth-child(1) {
+.plans-category-list .category-item:nth-child(1) {
   .plans-modules-list .modules-item:nth-child(-n + 7) {
     color: #101010;
     text-decoration: none;
@@ -247,7 +262,7 @@
 
 // LIST ITEM 2
 
-.plans-list .plans-item:nth-child(2) {
+.plans-category-list .category-item:nth-child(2) {
   .plans-modules-list .modules-item:nth-child(-n + 7) {
     color: #101010;
     text-decoration: none;
@@ -272,7 +287,7 @@
     background: #ffd05a;
   }
 
-  .item-title-container {
+  .category-title-container {
     background: #ffe8aa;
   }
 
@@ -283,7 +298,7 @@
 
 // LIST ITEM 3
 
-.plans-list .plans-item:nth-child(3) {
+.plans-category-list .category-item:nth-child(3) {
   .plans-modules-list .modules-item:nth-child(-n + 8) {
     color: #101010;
     text-decoration: none;
@@ -308,7 +323,7 @@
     background: #dff1ff;
   }
 
-  .item-title-container {
+  .category-title-container {
     background: #6e9af3;
   }
 
@@ -319,7 +334,7 @@
 
 // LIST ITEM 4
 
-.plans-list .plans-item:nth-child(4) {
+.plans-category-list .category-item:nth-child(4) {
   .plans-modules-list .modules-item:nth-child(-n + 8) {
     color: #101010;
     text-decoration: none;
@@ -344,7 +359,7 @@
     background: #fff;
   }
 
-  .item-title-container {
+  .category-title-container {
     background: #ffd05a;
   }
 
