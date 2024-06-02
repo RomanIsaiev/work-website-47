@@ -1,0 +1,146 @@
+@use "../utils/mixins" as mx;
+
+.author {
+  @include mx.adaptive("padding-bottom", 150, 75, 0);
+}
+
+.author-container {
+  @include mx.adaptive("width", 1396, 727, 0);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  @include mx.adaptive("margin-bottom", 70, 35, 0);
+}
+
+.author-image {
+  @include mx.adaptive("width", 617, 321, 0);
+  @include mx.adaptive("height", 836, 435, 0);
+}
+
+.author-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include mx.adaptive("margin-bottom", 100, 50, 0);
+}
+
+.author-title {
+  color: #101010;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 80, 40, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 80%; /* 96px */
+  letter-spacing: -3.2px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("margin-bottom", 10, 5, 0);
+}
+
+.author-subtitle {
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 128, 67, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80%; /* 102.4px */
+  letter-spacing: -5.12px;
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #4a81ef 0%, #7db1ff 50%, #4a81ef 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auhtor-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #4b82ef;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 40, 20, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 48px */
+  text-transform: uppercase;
+
+  @include mx.adaptive("padding", 30, 15, 0);
+
+  border-radius: 7px;
+  border: 1px solid #71a2ff;
+
+  @include mx.adaptive("width", 500, 260, 0);
+  @include mx.adaptive("height", 87, 46, 0);
+
+  @include mx.adaptive("margin-bottom", 30, 15, 0);
+}
+
+.auhtor-list {
+  padding-left: 25px;
+}
+
+.author-item {
+  color: #101010;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 32, 16, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 38.4px */
+}
+
+.author-desc-container {
+  @include mx.adaptive("padding", 40, 20, 0);
+  @include mx.adaptive("width", 844, 461, 0);
+
+  margin: 0 auto;
+
+  border-radius: 20px;
+  border: 1px solid #71a2ff;
+
+  @include mx.adaptive("margin-bottom", 50, 25, 0);
+}
+
+.author-desc-title {
+  color: #4b82ef;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 36, 20, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 38px */
+  letter-spacing: -0.76px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("margin-bottom", 20, 10, 0);
+}
+
+.author-desc-text {
+  color: #101010;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 36, 18, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 36px */
+  letter-spacing: -0.72px;
+}
+
+.author-cite {
+  color: #c1c1c1;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 48, 25, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90%; /* 43.2px */
+  letter-spacing: -0.96px;
+
+  @include mx.adaptive("width", 750, 390, 0);
+  margin: 0 auto;
+}

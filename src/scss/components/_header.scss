@@ -1,0 +1,177 @@
+@use "../utils/mixins" as mx;
+
+.header {
+  position: relative;
+
+  padding-top: 80px;
+  padding-bottom: 64px;
+
+  @include mx.adaptive("padding-top", 80, 40, 0);
+  @include mx.adaptive("padding-bottom", 64, 24, 0);
+
+  background-image: url(/src/img/header/header-background-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mx.adaptive("height", 1041, 542, 0);
+
+  .decor-money {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    z-index: 1;
+
+    @include mx.adaptive("width", 180, 94, 0);
+    @include mx.adaptive("height", 188, 99, 0);
+  }
+}
+
+.header-start {
+  display: block;
+  color: #dff1ff;
+  font-family: "Futura PT";
+
+  @include mx.adaptive("font-size", 28, 14, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 28px */
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("margin-bottom", 20, 10, 0);
+}
+
+.format-wrapper {
+  @include mx.adaptive("padding", 20, 10, 0);
+  border-radius: 7px;
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+
+  @include mx.adaptive("width", 535, 279, 0);
+  @include mx.adaptive("margin-bottom", 93, 47, 0);
+
+  .format-text {
+    color: #fff;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 12, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.48px;
+
+    span {
+      color: #ffd676;
+      font-family: "Futura PT";
+      @include mx.adaptive("font-size", 28, 14, 0);
+      font-style: normal;
+      font-weight: 450;
+      line-height: 100%; /* 28px */
+      letter-spacing: -0.56px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.header-title-container {
+  @include mx.adaptive("width", 1130, 589, 0);
+  @include mx.adaptive("margin-bottom", 94, 49, 0);
+}
+
+.header-title {
+  color: #fff;
+  font-family: "Bebas Neue Cyrillic";
+  @include mx.adaptive("font-size", 90, 46, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+
+  @include mx.adaptive("margin-bottom", 30, 15, 0);
+}
+
+.header-subtitle {
+  font-family: "Bebas Neue Cyrillic";
+  @include mx.adaptive("font-size", 130, 68, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%;
+
+  background: linear-gradient(90deg, #eaa800 0%, #ffeb80 50%, #eaa800 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.advantages-container {
+  @include mx.adaptive("width", 850, 443, 0);
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mx.adaptive("grid-row-gap", 20, 10, 0);
+  @include mx.adaptive("grid-column-gap", 10, 5, 0);
+
+  @include mx.adaptive("margin-bottom", 30, 15, 0);
+}
+
+.advantages-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 22, 11, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 22px */
+  letter-spacing: -0.44px;
+
+  @include mx.adaptive("padding", 20, 10, 0);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+
+  @include mx.adaptive("height", 90, 47, 0);
+
+  &:nth-child(-n + 2) {
+    width: 49.4%;
+  }
+}
+
+.advan-image {
+  position: absolute;
+  left: 50%;
+  top: -20%;
+  @include mx.adaptive("width", 46, 26, 0);
+  @include mx.adaptive("height", 46, 26, 0);
+
+  transform: translate(-50%);
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 22, 11, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 22px */
+  letter-spacing: -0.44px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("padding", 35, 18, 0);
+  @include mx.adaptive("height", 85, 44, 0);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4a81ef 0%, #7db1ff 50%, #4a81ef 100%);
+}

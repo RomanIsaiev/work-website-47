@@ -1,0 +1,161 @@
+@use "../utils/mixins" as mx;
+
+.steps {
+  @include mx.adaptive("padding-top", 150, 75, 0);
+  @include mx.adaptive("padding-bottom", 150, 75, 0);
+
+  background-image: url(/src/img/steps/steps-background-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    padding: 0 calc(50px + (30 - 50) * ((100vw - 1000px) / (1920 - 1000)));
+  }
+}
+
+.steps-title-container {
+  @include mx.adaptive("margin-bottom", 100, 50, 0);
+}
+
+.steps-title {
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 100, 52, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90%; /* 120px */
+  @include mx.adaptive(" letter-spacing", -7, -3.6, 0);
+  text-transform: uppercase;
+
+  @include mx.adaptive("margin-bottom", 20, 10, 0);
+}
+
+.steps-subtitle {
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 80, 41, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 72px */
+  letter-spacing: -3.2px;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    92deg,
+    #dfb039 8.51%,
+    #ffda78 54.63%,
+    #dfb039 97.36%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.steps-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+  @include mx.adaptive("grid-row-gap", 30, 15, 0);
+  @include mx.adaptive("grid-column-gap", 30, 15, 0);
+
+  @include mx.adaptive("margin-bottom", 100, 50, 0);
+}
+
+.steps-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mx.adaptive("width", 540, 282, 0);
+  @include mx.adaptive("height", 230, 120, 0);
+  border-radius: 15px;
+  border: 1px solid #ffd05a;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 0px 23.114px 0px rgba(255, 208, 90, 0.6);
+}
+
+.steps-image {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -12%;
+
+  @include mx.adaptive("width", 56, 36, 0);
+  @include mx.adaptive("height", 56, 36, 0);
+
+  transform: translate(-50%);
+}
+
+.steps-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mx.adaptive("gap", 15, 8, 0);
+}
+
+.steps-number {
+  color: rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 92, 47, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 92.147px */
+  letter-spacing: -6.45px;
+}
+
+.steps-text {
+  color: #fff;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 12, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 24px */
+  letter-spacing: -0.48px;
+
+  @include mx.adaptive("width", 370, 193, 0);
+}
+
+.steps-ready-container {
+  @include mx.adaptive("width", 879, 458, 0);
+  margin: 0 auto;
+}
+
+.steps-liberty {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 48, 25, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90%; /* 43.2px */
+  letter-spacing: -0.96px;
+
+  @include mx.adaptive("margin-bottom", 30, 15, 0);
+}
+
+.steps-btn {
+  display: block;
+
+  color: #101010;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 12, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 23.627px */
+  letter-spacing: -0.473px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("padding", 30, 15, 0);
+
+  border-radius: 10.786px;
+  background: linear-gradient(90deg, #eaa800 0%, #ffeb80 50%, #eaa800 100%);
+}

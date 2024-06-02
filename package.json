@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vite-sass-app-template/",
+    "build": "vite build",
     "preview": "vite preview",
     "watch": "npx vite build --watch"
   },
@@ -25,6 +25,7 @@
     "vite-plugin-image-optimizer": "^1.1.7"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "modern-normalize": "^2.0.0"
   }
 }

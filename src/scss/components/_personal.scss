@@ -1,0 +1,81 @@
+@use "../utils/mixins" as mx;
+
+.personal {
+  @include mx.adaptive("padding-top", 160, 86, 0);
+  @include mx.adaptive("padding-bottom", 150, 78, 0);
+}
+
+.personal-wrapper {
+  position: relative;
+
+  background: #dff1ff;
+  border-radius: 20px;
+
+  @include mx.adaptive("padding-top", 104, 55, 0);
+  @include mx.adaptive("padding-bottom", 103, 54, 0);
+
+  @include mx.adaptive("width", 1382, 720, 0);
+  @include mx.adaptive("height", 558, 291, 0);
+  margin: 0 auto;
+}
+
+.personal-image-container {
+  position: absolute;
+  @include mx.adaptive("left", 64, 32, 0);
+  bottom: 0;
+}
+
+.personal-author {
+  @include mx.adaptive("width", 507, 264, 0);
+  @include mx.adaptive("height", 507, 264, 0);
+}
+
+.personal-text-container {
+  position: absolute;
+  @include mx.adaptive("top", 104, 55, 0);
+  @include mx.adaptive("right", 80, 40, 0);
+
+  @include mx.adaptive("width", 680, 355, 0);
+}
+
+.personal-title {
+  color: #4b82ef;
+  font-family: "Bebas Neue Cyrillic";
+  @include mx.adaptive("font-size", 80, 40, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  letter-spacing: -1.6px;
+
+  @include mx.adaptive("margin-bottom", 10, 5, 0);
+}
+
+.personal-desc {
+  color: #101010;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 45, 23, 0);
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%; /* 45px */
+
+  @include mx.adaptive("margin-bottom", 30, 15, 0);
+}
+
+.personal-btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 22, 11, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 22px */
+  letter-spacing: -0.44px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("padding", 30, 15, 0);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4a81ef 0%, #7db1ff 50%, #4a81ef 100%);
+  @include mx.adaptive("width", 309, 160, 0);
+  @include mx.adaptive("height", 75, 39, 0);
+}

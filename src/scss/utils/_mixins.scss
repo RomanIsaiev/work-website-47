@@ -1,5 +1,5 @@
 $maxWidth: 1920;
-$maxWidthContainer: 1920;
+$maxWidthContainer: 1724;
 
 @mixin adaptive($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;
@@ -10,7 +10,7 @@ $maxWidthContainer: 1920;
       #{$property}: calc
         (
           #{$minSize + px} + #{$addSize} *
-            ((100vw - 375px) / #{$maxWidthContainer - 375})
+            ((100vw - 1000px) / #{$maxWidthContainer - 1000})
         );
     }
   } @else if $type==2 {
@@ -19,7 +19,7 @@ $maxWidthContainer: 1920;
     @media (min-width: #{$maxWidthContainer + px}) {
       #{$property}: calc(
         #{$minSize + px} + #{$addSize} *
-          ((100vw - 375px) / #{$maxWidthContainer - 375})
+          ((100vw - 1000px) / #{$maxWidthContainer - 1000})
       );
     }
   } @else {
@@ -28,19 +28,7 @@ $maxWidthContainer: 1920;
       #{$minSize +
         px} +
         #{$addSize} *
-        ((100vw - 375px) / #{$maxWidthContainer - 375})
+        ((100vw - 1000px) / #{$maxWidthContainer - 1000})
     );
-  }
-}
-
-@mixin image-2x($image) {
-  @media (-webkit-min-device-pixel-ratio: 2),
-    (min--moz-device-pixel-ratio: 2),
-    (-o-min-device-pixel-ratio: 2/1),
-    (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    /* on retina, use image that's scaled by 2 */
-    background-image: url($image);
   }
 }

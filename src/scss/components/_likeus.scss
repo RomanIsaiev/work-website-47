@@ -1,0 +1,86 @@
+@use "../utils/mixins" as mx;
+
+.likeus {
+  @include mx.adaptive("padding-top", 150, 78, 0);
+  @include mx.adaptive("padding-bottom", 150, 78, 0);
+  background: #101010;
+
+  background-image: url(/src/img/likeus/likeus-background-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.likeus-title {
+  text-align: center;
+  font-family: "Bebas Neue Cyrillic";
+  @include mx.adaptive("font-size", 130, 68, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%; /* 156px */
+  @include mx.adaptive(" letter-spacing", -5.2, -2.7, 0);
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #eaa800 0%, #ffeb80 50%, #eaa800 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include mx.adaptive("margin-bottom", 50, 40, 0);
+}
+
+.likeus-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+
+  @include mx.adaptive("margin-bottom", 100, 50, 0);
+}
+
+.likeus-item {
+  @include mx.adaptive("padding-top", 30, 15, 0);
+  @include mx.adaptive("padding-left", 27, 14, 0);
+  @include mx.adaptive("padding-right", 27, 14, 0);
+  border-radius: 20px;
+  background: #fff;
+  backdrop-filter: blur(13px);
+  @include mx.adaptive("width", 446, 232, 0);
+  @include mx.adaptive("height", 660, 343, 0);
+}
+
+.likeus-image {
+  display: block;
+  @include mx.adaptive("width", 392, 204, 0);
+  @include mx.adaptive("height", 392, 204, 0);
+}
+
+.likeus-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mx.adaptive("height", 238, 123, 0);
+}
+
+.likeus-text {
+  color: #101010;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 32, 16, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 28.8px */
+  letter-spacing: -0.64px;
+}
+
+.likeus-know {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 48, 24, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90%; /* 43.2px */
+  letter-spacing: -0.96px;
+}

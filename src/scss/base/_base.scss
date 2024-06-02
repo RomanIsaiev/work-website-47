@@ -33,7 +33,7 @@ p {
 }
 
 .container {
-  padding: 0 calc(15px + (70 - 15) * ((100vw - 375px) / (1920 - 375)));
+  padding: 0 calc(50px + (100 - 50) * ((100vw - 1000px) / (1920 - 1000)));
   margin: 0 auto;
 }
 

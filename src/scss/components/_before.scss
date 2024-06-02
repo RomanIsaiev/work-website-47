@@ -1,0 +1,73 @@
+@use "../utils/mixins" as mx;
+
+.before {
+  @include mx.adaptive("padding-top", 150, 78, 0);
+  @include mx.adaptive("padding-bottom", 100, 50, 0);
+  background: #101010;
+
+  background-image: url(/src/img/before/before-background-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.before-title {
+  text-align: center;
+  font-family: "Bebas Neue Cyrillic";
+  @include mx.adaptive("font-size", 130, 68, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 80%; /* 156px */
+  @include mx.adaptive(" letter-spacing", -5.2, -2.7, 0);
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #4a81ef 0%, #7db1ff 50%, #4a81ef 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include mx.adaptive("margin-bottom", 50, 40, 0);
+}
+
+.before-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.before-item {
+  @include mx.adaptive("padding-top", 30, 15, 0);
+  @include mx.adaptive("padding-left", 27, 14, 0);
+  @include mx.adaptive("padding-right", 27, 14, 0);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(13px);
+  @include mx.adaptive("width", 446, 232, 0);
+  @include mx.adaptive("height", 600, 312, 0);
+}
+
+.before-image {
+  display: block;
+  @include mx.adaptive("width", 392, 204, 0);
+  @include mx.adaptive("height", 392, 204, 0);
+}
+
+.before-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mx.adaptive("height", 178, 92, 0);
+}
+
+.before-text {
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 32, 16, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 28.8px */
+  letter-spacing: -0.64px;
+}
