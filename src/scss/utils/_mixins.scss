@@ -1,0 +1,46 @@
+$maxWidth: 1920;
+$maxWidthContainer: 1920;
+
+@mixin adaptive($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    //Только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc
+        (
+          #{$minSize + px} + #{$addSize} *
+            ((100vw - 375px) / #{$maxWidthContainer - 375})
+        );
+    }
+  } @else if $type==2 {
+    // Только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} *
+          ((100vw - 375px) / #{$maxWidthContainer - 375})
+      );
+    }
+  } @else {
+    // Всегда
+    #{$property}: calc(
+      #{$minSize +
+        px} +
+        #{$addSize} *
+        ((100vw - 375px) / #{$maxWidthContainer - 375})
+    );
+  }
+}
+
+@mixin image-2x($image) {
+  @media (-webkit-min-device-pixel-ratio: 2),
+    (min--moz-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+  }
+}

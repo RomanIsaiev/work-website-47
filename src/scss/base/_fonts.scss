@@ -1,0 +1,19 @@
+@use "../utils/variables" as var;
+
+$fonts: var.$font-weights;
+
+@each $key, $value in $fonts {
+  @font-face {
+    font-family: "Futura PT";
+    src: url("../fonts/FUTURAPT-#{$key}.TTF") format("truetype");
+    font-weight: $value;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@font-face {
+  font-family: "Bebas Neue Cyrillic";
+  src: url(../fonts/Bebas_Neue_Cyrillic.ttf);
+  font-weight: 400;
+}
