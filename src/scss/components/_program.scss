@@ -3,32 +3,45 @@
 .program {
   background: #090909;
   @include mx.adaptive("padding-top", 150, 75, 0);
-  @include mx.adaptive("padding-bottom", 100, 50, 0);
+  @include mx.adaptive("padding-bottom", 150, 75, 0);
 
   background-image: url(/src/img/program/program-background-1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .program-title-container {
+  @include mx.adaptive("margin-bottom", 100, 50, 0);
 }
 
 .program-title {
   color: #fff;
   text-align: center;
   font-family: "Futura PT";
-  @include mx.adaptive("font-size", 185, 78, 0);
+  @include mx.adaptive("font-size", 158, 82, 0);
   font-style: normal;
   font-weight: 300;
-  line-height: 70%; /* 222.613px */
-  @include mx.adaptive("letter-spacing", -11, -4.6, 0);
+  line-height: 80%; /* 189.6px */
+  @include mx.adaptive("letter-spacing", -9.5, -5, 0);
   text-transform: uppercase;
 
-  @include mx.adaptive("margin-bottom", 100, 40, 0);
+  margin-bottom: 10px;
 }
 
 .program-subtitle {
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 100, 52, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 90px */
+  @include mx.adaptive("letter-spacing", -4, -2, 0);
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #eaa800 0%, #ffeb80 50%, #eaa800 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* questions */
@@ -38,7 +51,7 @@
 }
 
 .question {
-  @include mx.adaptive("max-width", 790, 345, 0);
+  @include mx.adaptive("max-width", 788, 411, 0);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -69,10 +82,13 @@
 }
 
 .program-module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fff;
-  text-align: center;
   font-family: "Futura PT";
-  @include mx.adaptive("font-size", 21, 14, 0);
+  @include mx.adaptive("font-size", 21, 11, 0);
   font-style: normal;
   font-weight: 450;
   line-height: 100%; /* 14px */
@@ -81,18 +97,21 @@
 
   padding: 7px;
 
-  @include mx.adaptive("width", 130, 90, 0);
+  @include mx.adaptive("width", 120, 90, 0);
 
   border-radius: 5px;
-  background: #c60000;
-  border: 1px solid #c60000;
+  background: #4b82ef;
+  border: 1px solid #4b82ef;
 }
 
 .program-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fff;
-  text-align: center;
   font-family: "Futura PT";
-  @include mx.adaptive("font-size", 21, 14, 0);
+  @include mx.adaptive("font-size", 21, 11, 0);
   font-style: normal;
   font-weight: 450;
   line-height: 100%; /* 14px */
@@ -101,10 +120,10 @@
 
   padding: 7px;
 
-  @include mx.adaptive("width", 130, 90, 0);
+  @include mx.adaptive("width", 120, 90, 0);
 
   border-radius: 5px;
-  border: 1px solid #c60000;
+  border: 1px solid #4b82ef;
 }
 
 .open-close {
@@ -130,13 +149,13 @@
 .question-name {
   color: #fff;
   font-family: "Futura PT";
-  @include mx.adaptive("font-size", 26, 20, 0);
+  @include mx.adaptive("font-size", 26, 14, 0);
   font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: -0.3px;
+  font-weight: 500;
+  line-height: 100%; /* 26.502px */
+  letter-spacing: -0.53px;
 
-  @include mx.adaptive("max-width", 775, 265, 0);
+  @include mx.adaptive("max-width", 775, 365, 0);
 }
 
 .question-name span {
@@ -159,7 +178,7 @@
 .content-list .list-item {
   color: #fff;
   font-family: "Futura PT";
-  @include mx.adaptive("font-size", 26, 17, 0);
+  @include mx.adaptive("font-size", 26, 14, 0);
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -167,37 +186,37 @@
 }
 
 .content-list .list-item span {
-  color: #c60000;
+  color: #4b82ef;
 }
 
-.question-attention {
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #cff6b0;
-  background: rgba(255, 255, 255, 0.05);
+// .question-attention {
+//   padding: 15px;
+//   border-radius: 5px;
+//   border: 1px solid #cff6b0;
+//   background: rgba(255, 255, 255, 0.05);
 
-  max-width: 315px;
+//   max-width: 315px;
 
-  @include mx.adaptive("max-width", 790, 345, 0);
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
+//   @include mx.adaptive("max-width", 790, 345, 0);
+//   width: 100%;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
-.attention-text {
-  color: #fff;
-  font-family: "Futura PT";
-  @include mx.adaptive("font-size", 26, 17, 0);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: -0.3px;
-}
+// .attention-text {
+//   color: #fff;
+//   font-family: "Futura PT";
+//   @include mx.adaptive("font-size", 26, 17, 0);
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 100%;
+//   letter-spacing: -0.3px;
+// }
 
-.attention-text span {
-  color: #cff6b0;
-  @include mx.adaptive("font-size", 26, 15, 0);
-}
+// .attention-text span {
+//   color: #cff6b0;
+//   @include mx.adaptive("font-size", 26, 15, 0);
+// }
 
 .last-question {
   margin-bottom: 0;

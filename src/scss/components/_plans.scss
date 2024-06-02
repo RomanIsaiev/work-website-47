@@ -1,0 +1,358 @@
+@use "../utils/mixins" as mx;
+
+.plans {
+  @include mx.adaptive("padding-top", 150, 75, 0);
+  @include mx.adaptive("padding-bottom", 100, 50, 0);
+
+  .container {
+    padding: 0 calc(50px + (50 - 50) * ((100vw - 1000px) / (1920 - 1000)));
+  }
+}
+
+.plans-title-container {
+  @include mx.adaptive("margin-bottom", 100, 50, 0);
+}
+
+.plans-title {
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 100, 52, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 90px */
+  @include mx.adaptive(" letter-spacing", -5, -2.6, 0);
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #4a81ef 0%, #7db1ff 50%, #4a81ef 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 10px;
+}
+
+.plans-subtitle {
+  color: #101010;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 130, 68, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 80%; /* 156px */
+  letter-spacing: -9.1px;
+  text-transform: uppercase;
+}
+
+.plans-list {
+  display: flex;
+  @include mx.adaptive("gap", 15, 10, 0);
+
+  //   @include mx.adaptive("height", 1194, 622, 0);
+}
+
+.plans-item {
+  position: relative;
+
+  background: #fff;
+  @include mx.adaptive("width", 400, 205, 0);
+  @include mx.adaptive("height", 1194, 622, 0);
+}
+
+.plans-image {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -5%;
+
+  @include mx.adaptive("width", 91, 51, 0);
+  @include mx.adaptive("height", 91, 51, 0);
+
+  transform: translate(-50%);
+}
+
+.item-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px 13px 0px 0px;
+  background: #dff1ff;
+
+  @include mx.adaptive("height", 135, 70, 0);
+  width: 100%;
+}
+
+.plan-name {
+  color: #090909;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 13, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 28.8px */
+  text-transform: uppercase;
+
+  @include mx.adaptive("margin-bottom", 10, 5, 0);
+}
+
+.plan-mentor {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 16, 8, 0);
+  font-style: normal;
+  font-weight: 450;
+  line-height: 120%; /* 19.2px */
+  text-transform: uppercase;
+
+  padding: 7px;
+  border-radius: 4px;
+  background: #6e9af3;
+
+  @include mx.adaptive("width", 152, 80, 0);
+  margin: 0 auto;
+}
+
+.plans-content {
+  padding: calc(15px + (30 - 15) * ((100vw - 1000px) / (1920 - 1000)))
+    calc(9px + (19 - 9) * ((100vw - 1000px) / (1920 - 1000)));
+
+  border: 3px solid #dff1ff;
+  border-radius: 0 0 13px 13px;
+}
+
+.plans-lists-container {
+  @include mx.adaptive("margin-bottom", 40, 20, 0);
+}
+
+.earn-text {
+  color: #6e9af3;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 20, 10, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 19.809px */
+  letter-spacing: -0.396px;
+
+  @include mx.adaptive("padding", 20, 10, 0);
+
+  border-radius: 10px;
+  border: 1px solid #6e9af3;
+
+  @include mx.adaptive("margin-bottom", 40, 20, 0);
+}
+
+.plans-modules-list {
+  display: flex;
+  flex-direction: column;
+  @include mx.adaptive("gap", 10, 7, 0);
+
+  padding-left: 25px;
+  list-style: disc;
+}
+
+.modules-item {
+  color: #ababab;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 20, 10, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.396px;
+
+  text-decoration: line-through;
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.plans-desc-list {
+  display: flex;
+  flex-direction: column;
+  @include mx.adaptive("gap", 10, 7, 0);
+
+  padding-left: 25px;
+  list-style: disc;
+}
+
+.plans-desc-item {
+  color: #ababab;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 20, 10, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.396px;
+
+  text-decoration: line-through;
+
+  span {
+    color: #6e9af3;
+    font-weight: 500;
+  }
+}
+
+.price-wrapper {
+  @include mx.adaptive("padding", 20, 10, 0);
+  border-radius: 10px;
+  border: 1px solid #6e9af3;
+}
+
+.price-title {
+  color: #101010;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 12, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 24px */
+  letter-spacing: -0.48px;
+
+  @include mx.adaptive("margin-bottom", 10, 5, 0);
+}
+
+.price {
+  color: #6e9af3;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 48, 25, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 48px */
+  letter-spacing: -0.96px;
+
+  span {
+    color: rgba(110, 154, 243, 0.4);
+    text-decoration: line-through;
+  }
+}
+
+// LIST ITEM 1
+
+.plans-list .plans-item:nth-child(1) {
+  .plans-modules-list .modules-item:nth-child(-n + 7) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-child(-n + 4) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-last-child(-n + 2) {
+    color: #101010;
+    text-decoration: none;
+  }
+}
+
+// LIST ITEM 2
+
+.plans-list .plans-item:nth-child(2) {
+  .plans-modules-list .modules-item:nth-child(-n + 7) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-child(-n + 4) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-last-child(-n + 2) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plan-name {
+    color: #090909;
+  }
+
+  .plan-mentor {
+    color: #101010;
+    background: #ffd05a;
+  }
+
+  .item-title-container {
+    background: #ffe8aa;
+  }
+
+  .plans-content {
+    border: 3px solid #ffe8aa;
+  }
+}
+
+// LIST ITEM 3
+
+.plans-list .plans-item:nth-child(3) {
+  .plans-modules-list .modules-item:nth-child(-n + 8) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-child(-n + 8) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-last-child(-n + 2) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plan-name {
+    color: #fff;
+  }
+
+  .plan-mentor {
+    color: #101010;
+    background: #dff1ff;
+  }
+
+  .item-title-container {
+    background: #6e9af3;
+  }
+
+  .plans-content {
+    border: 3px solid #6e9af3;
+  }
+}
+
+// LIST ITEM 4
+
+.plans-list .plans-item:nth-child(4) {
+  .plans-modules-list .modules-item:nth-child(-n + 8) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-child(-n + 10) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plans-desc-list .plans-desc-item:nth-last-child(-n + 2) {
+    color: #101010;
+    text-decoration: none;
+  }
+
+  .plan-name {
+    color: #090909;
+  }
+
+  .plan-mentor {
+    color: #4a81ef;
+    background: #fff;
+  }
+
+  .item-title-container {
+    background: #ffd05a;
+  }
+
+  .plans-content {
+    border: 3px solid #ffd05a;
+  }
+}
