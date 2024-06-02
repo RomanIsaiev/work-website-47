@@ -39,23 +39,19 @@
   font-style: normal;
   font-weight: 300;
   line-height: 80%; /* 156px */
-  letter-spacing: -9.1px;
+  @include mx.adaptive(" letter-spacing", -9.1, -4.7, 0);
   text-transform: uppercase;
 }
 
 .plans-list {
   display: flex;
   @include mx.adaptive("gap", 15, 10, 0);
-
-  //   @include mx.adaptive("height", 1194, 622, 0);
 }
 
 .plans-item {
   position: relative;
-
   background: #fff;
-  @include mx.adaptive("width", 400, 205, 0);
-  @include mx.adaptive("height", 1194, 622, 0);
+  @include mx.adaptive("width", 416, 216, 0);
 }
 
 .plans-image {
@@ -74,10 +70,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 13px 13px 0px 0px;
   background: #dff1ff;
-
   @include mx.adaptive("height", 135, 70, 0);
   width: 100%;
 }
@@ -115,15 +109,15 @@
 }
 
 .plans-content {
+  position: relative;
+
   padding: calc(15px + (30 - 15) * ((100vw - 1000px) / (1920 - 1000)))
     calc(9px + (19 - 9) * ((100vw - 1000px) / (1920 - 1000)));
 
   border: 3px solid #dff1ff;
   border-radius: 0 0 13px 13px;
-}
 
-.plans-lists-container {
-  @include mx.adaptive("margin-bottom", 40, 20, 0);
+  @include mx.adaptive("height", 1159, 552, 0);
 }
 
 .earn-text {
@@ -176,6 +170,8 @@
 
   padding-left: 25px;
   list-style: disc;
+
+  @include mx.adaptive("margin-bottom", 40, 20, 0);
 }
 
 .plans-desc-item {
